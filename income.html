@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expense tracker</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="tabs">
+                <button
+                    class="tab_expense"
+                    onclick="location.href='index.html'"
+                >
+                    Expense
+                </button>
+                <button class="tab_income">Income</button>
+            </div>
+
+            <div class="date-row">
+                <label>Date</label>
+                <input type="date" lang="en" />
+            </div>
+
+            <div class="note-row">
+                <label>Note</label>
+                <input type="text" placeholder="Not entered" />
+            </div>
+
+            <div class="amount-row">
+                <label>Income</label>
+                <div class="input-with-symbol">
+                    <input type="number" step="0.01" />
+                </div>
+            </div>
+
+            <!-- Category -->
+
+            <button class="submit-btn">Enter</button>
+        </div>
+    </body>
+</html>
