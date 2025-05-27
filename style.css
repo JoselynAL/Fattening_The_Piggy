@@ -95,7 +95,91 @@ body {
     font-size: 16px;
 }
 
-  
+/* Joss starts */
+
+  .header_body {
+    background-color: white;
+    color: #f1363f;
+    text-align: left;
+    padding: 15px 25px;
+    margin-top: 10px;
+  }
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 10px;
+  }
+  .container_food,
+  .container_household_items,
+  .container_clothes,
+  .container_cosmetics,
+  .container_outings,
+  .container_health,
+  .container_education,
+  .container_electricity_bill,
+  .container_transportation,
+  .container_internet,
+  .container_rent,
+  .container_edit,
+  .container_salary,
+  .container_extra,
+  .container_bonus,
+  .container_invest {
+    width: 70px;
+    height: 60px;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 5px;
+    
+  }
+  .container_food img,
+  .container_household_items img,
+  .container_clothes img,
+  .container_cosmetics img,
+  .container_outings img,
+  .container_health img,
+  .container_education img,
+  .container_electricity_bill img,
+  .container_transportation img,
+  .container_internet img,
+  .container_rent img,
+  .container_edit img,
+  .container_salary img,
+  .container_extra img,
+  .container_bonus img,
+  .container_invest img {
+    width: 30px;
+    height: 30px;
+  }
+  .container_food p,
+  .container_household_items p,
+  .container_clothes p,
+  .container_cosmetics p,
+  .container_outings p,
+  .container_health p,
+  .container_education p,
+  .container_electricity_bill p,
+  .container_transportation p,
+  .container_internet p,
+  .container_rent p,
+  .container_edit p,
+  .container_salary p,
+  .container_extra p,
+  .container_bonus p,
+  .container_invest p {            
+    font-size: 11px;            
+    /* font-weight: bolder; */
+    color: #9d9b08;
+    justify-content: center;
+    align-items: center;
+  }
+/* Joss ends */
+
+/* Kaho start */  
   .submit-btn {
     width: 100%;
     padding: 12px;
