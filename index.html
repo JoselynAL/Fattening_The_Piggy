@@ -20,18 +20,18 @@
 
             <div class="date-row">
                 <label>Date</label>
-                <input type="date" lang="en" />
+                <input type="date" lang="en" id="expense-date"/>
             </div>
 
             <div class="note-row">
                 <label>Note</label>
-                <input type="text" placeholder="Not entered" />
+                <input type="text" placeholder="Not entered" id="expense-note"/>
             </div>
 
             <div class="amount-row">
                 <label>Expense</label>
                 <div class="input-with-symbol">
-                    <input type="number" step="0.01" />
+                    <input type="number" step="0.01" id="expense-amount"/>
                 </div>
             </div>
          
@@ -40,48 +40,48 @@
             <section class="header_body">
                 <p>Category</p>
             </section>
-            <section class="body">
-                <div class="container_food">
+            <section class="body" id="category-section">
+                <div class="container_food" data-caregory="Food">
                     <img src="./img/pizza.png" alt="Food Image">
                     <p>Food</p>
                 </div>
-                <div class="container_household_items">
+                <div class="container_household_items" data-caregory="Household">
                     <img src="./img/house (1).png" alt="Household Item Image">
                     <p>Household Item</p>                    
                 </div>
-                <div class="container_clothes">
+                <div class="container_clothes" data-caregory="clothes">
                     <img src="./img//laundry.png" alt="clothes Image">
                     <p>Clothes</p>                    
                 </div>
-                <div class="container_cosmetics">
+                <div class="container_cosmetics" data-caregory="cosmetics">
                     <img src="./img/skin-care.png" alt="cosmetics Image">
                     <p>Skincare</p>                    
                 </div>
-                <div class="container_outings">
+                <div class="container_outings" data-caregory="outings">
                     <img src="./img/dance.png" alt="outings Image">
                     <p>Outings</p>                    
                 </div>
-                <div class="container_health">
+                <div class="container_health" data-caregory="health">
                     <img src="./img/health/stethoscope_light.svg" alt="health Image">
                     <p>Health</p>                    
                 </div>
-                <div class="container_education">
+                <div class="container_education" data-caregory="education">
                     <img src="./img/education (1).png" alt="education Image">
                     <p>Education</p>                    
                 </div>
-                <div class="container_electricity_bill">
+                <div class="container_electricity_bill" data-caregory="electricity_bill">
                     <img src="./img/electrical-energy.png" alt="electricity_bill Image">
                     <p>Electricity bill</p>                    
                 </div>
-                <div class="container_transportation">
+                <div class="container_transportation" data-caregory="transportation">
                     <img src="./img/train-station.png" alt="transportation Image">
                     <p>Transportation</p>
                 </div>
-                <div class="container_internet">
+                <div class="container_internet" data-caregory="internet">
                     <img src="./img/chat.png" alt="internet Image">
                     <p>Internet</p>
                 </div>
-                <div class="container_rent">
+                <div class="container_rent" data-caregory="rent">
                     <img src="./img/rent (1).png" alt="rent Image">
                     <p>Rent</p>                    
                 </div>
@@ -92,8 +92,9 @@
             </section>
             <!-- Joss part body ends -->
         <div>
-            <button class="submit-btn">Enter</button>
+            <button class="submit-btn" id="submit-expense">Enter</button>
         </div>
     </div> 
     </body>
+    <script src="script.js" defer></script>
 </html>
