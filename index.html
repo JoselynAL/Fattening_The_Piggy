@@ -41,47 +41,47 @@
                 <p>Category</p>
             </section>
             <section class="body" id="category-section">
-                <div class="container_food" data-caregory="Food">
+                <div class="container_food" data-category="Food">
                     <img src="./img/pizza.png" alt="Food Image">
                     <p>Food</p>
                 </div>
-                <div class="container_household_items" data-caregory="Household">
+                <div class="container_household_items" data-category="Household">
                     <img src="./img/house (1).png" alt="Household Item Image">
                     <p>Household Item</p>                    
                 </div>
-                <div class="container_clothes" data-caregory="clothes">
+                <div class="container_clothes" data-category="clothes">
                     <img src="./img//laundry.png" alt="clothes Image">
                     <p>Clothes</p>                    
                 </div>
-                <div class="container_cosmetics" data-caregory="cosmetics">
+                <div class="container_cosmetics" data-category="cosmetics">
                     <img src="./img/skin-care.png" alt="cosmetics Image">
                     <p>Skincare</p>                    
                 </div>
-                <div class="container_outings" data-caregory="outings">
+                <div class="container_outings" data-category="outings">
                     <img src="./img/dance.png" alt="outings Image">
                     <p>Outings</p>                    
                 </div>
-                <div class="container_health" data-caregory="health">
+                <div class="container_health" data-category="health">
                     <img src="./img/health/stethoscope_light.svg" alt="health Image">
                     <p>Health</p>                    
                 </div>
-                <div class="container_education" data-caregory="education">
+                <div class="container_education" data-category="education">
                     <img src="./img/education (1).png" alt="education Image">
                     <p>Education</p>                    
                 </div>
-                <div class="container_electricity_bill" data-caregory="electricity_bill">
+                <div class="container_electricity_bill" data-category="electricity_bill">
                     <img src="./img/electrical-energy.png" alt="electricity_bill Image">
                     <p>Electricity bill</p>                    
                 </div>
-                <div class="container_transportation" data-caregory="transportation">
+                <div class="container_transportation" data-category="transportation">
                     <img src="./img/train-station.png" alt="transportation Image">
                     <p>Transportation</p>
                 </div>
-                <div class="container_internet" data-caregory="internet">
+                <div class="container_internet" data-category="internet">
                     <img src="./img/chat.png" alt="internet Image">
                     <p>Internet</p>
                 </div>
-                <div class="container_rent" data-caregory="rent">
+                <div class="container_rent" data-category="rent">
                     <img src="./img/rent (1).png" alt="rent Image">
                     <p>Rent</p>                    
                 </div>
@@ -94,7 +94,15 @@
         <div>
             <button class="submit-btn" id="submit-expense">Enter</button>
         </div>
+        <div id="expense-list" class="expense-list"></div>
+        <div class="expense-list-section">
+            <h2>Expense History</h2>
+            <ul id="expense-list"></ul>
+        </div>
+        <div id="total-expense" class="total-expense"></div>
     </div> 
     </body>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </html>
