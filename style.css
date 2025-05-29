@@ -1,98 +1,168 @@
-body {
-    font-family: sans-serif;
-    background-color: #fdfdfd;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    background: white;
-    padding: 16px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-  }
-  
-  .time {
-    text-align: left;
-    font-size: 14px;
-    color: #fff;
-    background-color: #cc2e78;
-    width: fit-content;
-    padding: 4px 8px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-  }
-  
-  .tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
+bbody {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  /* .tab_expense,
-  .tab_income {
-    display: block;
-    width: 100%; 
-    margin-bottom: 8px; 
-  } */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+}
 
-  
-  .tab_expense { 
-    padding: 12px;
-    border: none;
-    background-color: #f3c7de;
-    font-weight: bold;
-    cursor: pointer;
-    width: 40%;
-  }
-  
-  .tab_income {
-    background-color: white;
-    border-color: pink;
-    width: 40%;
-  }
-  
-  .date-row,
-  .note-row,
-  .amount-row {
-    margin-bottom: 12px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 4px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="number"] {
-    width: 95%;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
 
-  .input-with-symbol {
-    position: relative;
+.tab_pink {
+  padding: 12px;
+  border: none;
+  background-color: #f3c7de;
+  font-weight: bold;
+  width: 40%;
+}
+
+.tab_white {
+  background-color: white;
+  border-color: pink;
+  width: 40%;
+}
+
+.date-row,
+.note-row,
+.amount-row {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 95%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+input[type="number"] {
+  width: calc(95% - 12px);
+}
+
+.input-with-symbol {
+  position: relative;
 }
 
 .input-with-symbol::before {
-    content: "$";
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #555;
-    pointer-events: none;
+  content: "$";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #555;
+  pointer-events: none;
 }
 
 .input-with-symbol input {
-    padding-left: 20px; /* $分のスペースを確保 */
-    height: 30px;
-    font-size: 16px;
+  padding-left: 20px; /space for $mark/
+  height: 30px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #c06faa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 601px) {
+  .container {
+      max-width: 100%;
+      margin: 0;
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+  }
+
+  .tabs {
+      margin: 0 auto;
+      justify-content: center;
+  }
+
+  .tab_pink,
+  .tab_white {
+      width: 150px;
+  }
+
+  .date-row,
+  .note-row,
+  .amount-row {
+      width: 100%;
+      margin-bottom: 12px;
+  }
+
+  label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+      width: 95%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+  }
+
+  input[type="number"] {
+      width: calc(95% - 12px);
+  }
+
+  .input-with-symbol {
+      position: relative;
+  }
+
+  .input-with-symbol::before {
+      content: "$";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #555;
+      pointer-events: none;
+  }
+
+  .input-with-symbol input {
+      padding-left: 20px; /space for $mark/
+      height: 30px;
+      font-size: 16px;
+  }
+  .date-row,
+  .note-row,
+  .amount-row {
+      width: 50%;
+      margin-bottom: 12px;
+  }
+  .submit-btn {
+      width: 50%;
+  }
 }
 
 /* Joss starts */
@@ -206,4 +276,33 @@ body {
     font-size: 14px;
     color: #333;
   } */
+
+ 
+
+  .selected {
+    border: 2px solid #007BFF;
+    background-color: #e6f0ff;
+    border-radius: 8px;
+}
+
+  .expense-list-section {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  #expense-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #expense-list li {
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
   
