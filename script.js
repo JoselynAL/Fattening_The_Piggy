@@ -1,6 +1,6 @@
 // script.js
 // ================================
-// 1. VARIABLES GLOBALES
+// 1. GLOBAL VARIABLES
 // ================================
 let selectedCategory = null;
 
@@ -10,7 +10,7 @@ const amountInput = document.querySelector("input[type='number']");
 const submitBtn = document.querySelector(".submit-btn");
 
 // ================================
-// 2. SELECCIÓN DE CATEGORÍA
+// 2. CATEGORY SECTION
 // ================================
 const categoryContainers = document.querySelectorAll('.body > div');
 
@@ -28,7 +28,7 @@ categoryContainers.forEach(container => {
 });
 
 // ================================
-// 3. GUARDAR NUEVO GASTO
+// 3. SAVED NEW EXPENSE
 // ================================
 submitBtn.addEventListener("click", () => {
   const date = dateInput.value;
@@ -57,7 +57,7 @@ submitBtn.addEventListener("click", () => {
 });
 
 // ================================
-// 4. BORRAR GASTO
+// 4. DELETE EXPENSE
 // ================================
 function deleteExpense(id) {
   let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
@@ -67,7 +67,7 @@ function deleteExpense(id) {
 }
 
 // ================================
-// 5. CARGAR GASTOS + TOTAL
+// 5. LOAD EXPENSES + TOTAL
 // ================================
 function loadExpenses() {
   const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
@@ -82,17 +82,17 @@ function loadExpenses() {
     div.classList.add("expense-item");
     div.innerHTML = `
       <p><strong>${expense.category}</strong> - ${expense.note} - $${expense.amount} <br><small>${expense.date}</small></p>
-      <button onclick="deleteExpense('${expense.id}')">Eliminar</button>
+      <button onclick="deleteExpense('${expense.id}')">Delete</button>
     `;
     listContainer.appendChild(div);
     total += parseFloat(expense.amount);
   });
 
-  totalContainer.innerHTML = `<p><strong>Total Gastado:</strong> $${total.toFixed(2)}</p>`;
+  totalContainer.innerHTML = `<p><strong>Total:</strong> $${total.toFixed(2)}</p>`;
 }
 
 // ================================
-// 6. LIMPIAR FORMULARIO
+// 6. CLEAR FORM
 // ================================
 function clearForm() {
   dateInput.value = "";
@@ -105,7 +105,7 @@ function clearForm() {
 }
 
 // ================================
-// 7. AL CARGAR LA PÁGINA
+// 7. LOAD THE PAGE
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
   loadExpenses();
