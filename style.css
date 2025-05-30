@@ -1,4 +1,4 @@
-bbody {
+body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -73,7 +73,7 @@ input[type="number"] {
 }
 
 .input-with-symbol input {
-  padding-left: 20px; /space for $mark/
+  padding-left: 20px; /* space for $mark */
   height: 30px;
   font-size: 16px;
 }
@@ -150,7 +150,7 @@ input[type="number"] {
   }
 
   .input-with-symbol input {
-      padding-left: 20px; /space for $mark/
+      padding-left: 20px; /* space for $mark */
       height: 30px;
       font-size: 16px;
   }
@@ -183,7 +183,7 @@ input[type="number"] {
   .container_food,
   .container_household_items,
   .container_clothes,
-  .container_cosmetics,
+  .container_skincare,
   .container_outings,
   .container_health,
   .container_education,
@@ -209,7 +209,7 @@ input[type="number"] {
   .container_food img,
   .container_household_items img,
   .container_clothes img,
-  .container_cosmetics img,
+  .container_skincare img,
   .container_outings img,
   .container_health img,
   .container_education img,
@@ -228,7 +228,7 @@ input[type="number"] {
   .container_food p,
   .container_household_items p,
   .container_clothes p,
-  .container_cosmetics p,
+  .container_skincare p,
   .container_outings p,
   .container_health p,
   .container_education p,
@@ -276,8 +276,6 @@ input[type="number"] {
     font-size: 14px;
     color: #333;
   } */
-
- 
 
   .selected {
     border: 2px solid #007BFF;

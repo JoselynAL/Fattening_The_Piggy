@@ -110,3 +110,46 @@ function clearForm() {
 document.addEventListener("DOMContentLoaded", () => {
   loadExpenses();
 });
+document.getElementById("apply-filters").addEventListener("click", applyFilters);
+
+document.getElementById("reset-filters").addEventListener("click", () => {
+  document.getElementById("filter-date").value = "";
+  document.getElementById("filter-category").value = "";
+  loadExpenses(); // Muestra todos otra vez
+});
+
+
+// ================================
+//8. FILTER EXPENSES
+// ================================
+function applyFilters() {
+    const selectedDate = document.getElementById("filter-date").value;
+    const selectedCategory = document.getElementById("filter-category").value;
+    const listContainer = document.getElementById("expense-list");
+    const totalContainer = document.getElementById("total-expense");
+  
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+  
+    const filteredExpenses = expenses.filter(exp => {
+      const matchesDate = selectedDate ? exp.date === selectedDate : true;
+      const matchesCategory = selectedCategory ? exp.category === selectedCategory : true;
+      return matchesDate && matchesCategory;
+    });
+  
+    listContainer.innerHTML = "";
+    let total = 0;
+  
+    filteredExpenses.forEach(expense => {
+      const div = document.createElement("div");
+      div.classList.add("expense-item");
+      div.innerHTML = `
+        <p><strong>${expense.category}</strong> - ${expense.note} - $${expense.amount} <br><small>${expense.date}</small></p>
+        <button onclick="deleteExpense('${expense.id}')">Eliminar</button>
+      `;
+      listContainer.appendChild(div);
+      total += parseFloat(expense.amount);
+    });
+  
+    totalContainer.innerHTML = `<p><strong>Total Filtrado:</strong> $${total.toFixed(2)}</p>`;
+  }
+  

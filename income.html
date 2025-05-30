@@ -6,17 +6,21 @@
         <title>Expense tracker</title>
         <link rel="stylesheet" href="style.css" />
     </head>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" />
+            </div>
+        </div>
+    </nav>
     <body>
         <div class="container">
             <div class="tabs">
-                <button
-                    class="tab_white"
-                    onclick="location.href='index.html'"
-                >
-                    Expense
-                </button>
+                <button class="tab_white"onclick="location.href='index.html'">Expense</button>
                 <button class="tab_pink">Income</button>
+                <button class="tab_white" onclick="location.href='expense_managment.html'">Managment</button>
             </div>
+        
 
             <div class="date-row">
                 <label>Date</label>
@@ -67,4 +71,6 @@
             <button class="submit-btn">Enter</button>
         </div>
     </body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>

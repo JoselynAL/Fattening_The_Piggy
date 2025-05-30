@@ -6,16 +6,24 @@
         <title>Expense tracker</title>
         <link rel="stylesheet" href="style.css" />
     </head>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" />
+            </div>
+        </div>
+    </nav>
     <body>
         <div class="container">
             <div class="tabs">
-                <button class="tab_pink">Expense</button>
+                <button class="tab_pink" href="expense.html">Expense</button>
                 <button
                     class="tab_white"
-                    onclick="location.href='income.html'"
-                >
-                    Income
-                </button>
+                    onclick="location.href='income.html'" href="income.html">Income</button>
+                <button
+                    class="tab_white"
+                    onclick="location.href='expense_managment.html'" href="expense_managment.html">
+                    Managment</button>
             </div>
 
             <div class="date-row">
@@ -53,7 +61,7 @@
                     <img src="./img//laundry.png" alt="clothes Image">
                     <p>Clothes</p>                    
                 </div>
-                <div class="container_cosmetics" data-category="cosmetics">
+                <div class="container_skincare" data-category="skincare">
                     <img src="./img/skin-care.png" alt="cosmetics Image">
                     <p>Skincare</p>                    
                 </div>
@@ -90,17 +98,13 @@
                     <p>Edit</p>
                 </div>
             </section>
-            <!-- Joss part body ends -->
-        <div>
-            <button class="submit-btn" id="submit-expense">Enter</button>
+        
+           <!-- Joss part body ends -->
+            <div>
+                <button class="submit-btn" id="submit-expense">Enter</button>
+            </div>
         </div>
-        <div id="expense-list" class="expense-list"></div>
-        <div class="expense-list-section">
-            <h2>Expense History</h2>
-            <ul id="expense-list"></ul>
-        </div>
-        <div id="total-expense" class="total-expense"></div>
-    </div> 
+    
     </body>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
