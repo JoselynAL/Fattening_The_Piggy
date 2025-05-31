@@ -6,69 +6,91 @@
         <title>Expense tracker</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="./img/logo.png" alt="Logo" />
-            </div>
-        </div>
-    </nav>
     <body>
         <div class="container">
             <div class="tabs">
-                <button class="tab_white"onclick="location.href='index.html'">Expense</button>
+                <button class="tab_white" onclick="location.href='index.html'">
+                    Expense
+                </button>
                 <button class="tab_pink">Income</button>
-                <button class="tab_white" onclick="location.href='expense_managment.html'">Managment</button>
-            </div>
-        
-
-            <div class="date-row">
-                <label>Date</label>
-                <input type="date" lang="en" />
-            </div>
-
-            <div class="note-row">
-                <label>Note</label>
-                <input type="text" placeholder="Not entered" />
+                <button
+                    class="tab_white"
+                    onclick="location.href='expense_managment.html'"
+                >
+                    Managment
+                </button>
             </div>
 
-            <div class="amount-row">
-                <label>Income</label>
-                <div class="input-with-symbol">
-                    <input type="number" step="0.01" />
+            <div class="display">
+                <div class="display_left">
+                    <div class="date-row">
+                        <label>Date</label>
+                        <input type="date" lang="en" id="expense-date" />
+                    </div>
+
+                    <div class="note-row">
+                        <label>Note</label>
+                        <input
+                            type="text"
+                            placeholder="Not entered"
+                            id="expense-note"
+                        />
+                    </div>
+
+                    <div class="amount-row">
+                        <label>Expense</label>
+                        <div class="input-with-symbol">
+                            <input
+                                type="number"
+                                step="0.01"
+                                id="expense-amount"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo -->
+                <div>
+                    <img
+                        class="pig_logo"
+                        src="./img/piggy-bank.png"
+                        alt="Logo"
+                        class="logo-image"
+                    />
                 </div>
             </div>
-
             <!-- Category -->
-             <!-- Joss part body start -->
-            
+            <!-- Joss part body start -->
+
             <section class="header_body">
                 <p>Category</p>
             </section>
             <section class="body">
                 <div class="container_salary">
-                    <img src="" alt="">
+                    <img src="" alt="" />
                     <p>Salary</p>
                 </div>
                 <div class="container_extra">
-                    <img src="" alt="">
-                    <p>Extra Work</p>                    
+                    <img src="" alt="" />
+                    <p>Extra Work</p>
                 </div>
                 <div class="container_bonus">
-                    <img src="" alt="">
-                    <p>Bonus</p>                    
+                    <img src="" alt="" />
+                    <p>Bonus</p>
                 </div>
                 <div class="container_invest">
-                    <img src="" alt="">
-                    <p>Investments</p>                    
+                    <img src="" alt="" />
+                    <p>Investments</p>
                 </div>
                 <div class="container_edit">
-                    <img src="" alt="">
-                    <p>Edit</p>                    
+                    <img src="" alt="" />
+                    <p>Edit</p>
                 </div>
             </section>
-                <!-- Joss part body ends -->
-            <button class="submit-btn">Enter</button>
+
+            <!-- Joss part body ends -->
+            <div style="display: flex; justify-content: center">
+                <button class="submit-btn" id="submit-expense">Enter</button>
+            </div>
         </div>
     </body>
     <script src="script.js"></script>
