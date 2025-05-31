@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<nav>
-    <div class="nav-container">
-        <div class="logo">
-            <img src="./img/logo.png" alt="Logo" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="tabs">
+                <button
+                    class="tab_white"
+                    onclick="location.href='income.html'"
+                    href="expense.html"
+                >
+                    Expense
+                </button>
+                <button
+                    class="tab_white"
+                    onclick="location.href='income.html'"
+                    href="income.html"
+                >
+                    Income
+                </button>
+                <button
+                    class="tab_pink"
+                    onclick="location.href='expense_managment.html'"
+                    href="expense_managment.html"
+                >
+                    Managment
+                </button>
+            </div>
+
+            <div class="expense-list-section" id="expense-list">
+                <input type="date" id="filter-date" />
+
+                <!-- Filtro por categoría -->
+                <select id="filter-category">
+                    <option value="">Categories</option>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="outings">Outings</option>
+                    <option value="container_household_items">Household</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="skincare">Skincare</option>
+                    <option value="health">Health</option>
+                    <option value="education">Education</option>
+                    <option value="electricity_bill">Electricity bill</option>
+                    <option value="internet">Internet</option>
+                    <option value="rent">Rent</option>
+                </select>
+
+                <button id="apply-filters">Filter</button>
+                <button id="reset-filters">Reset</button>
+
+                <h3>Expense History</h3>
+                <ul id="expense-list"></ul>
+                <div id="expense-list" class="expense-list"></div>
+                <div id="total-expense" class="total-expense"></div>
+            </div>
         </div>
-    </div>
-</nav>
-
-<body>
-    <div  class="container">
-        <div class="tabs">
-            <button class="tab_white" onclick="location.href='income.html'" href="expense.html">Expense</button>
-            <button class="tab_white"onclick="location.href='income.html'" href="income.html">Income</button>
-            <button class="tab_pink"onclick="location.href='expense_managment.html'" href="expense_managment.html">Managment</button>
-        </div>
-
-        <div class="expense-list-section" id="expense-list">
-            <input type="date" id="filter-date"/>
-
-            <!-- Filtro por categoría -->
-            <select id="filter-category">
-                <option value="">Categories</option>
-                <option value="Food">Food</option>
-                <option value="Transportation">Transportation</option>
-                <option value="outings">Outings</option>
-                <option value="container_household_items">Household</option>
-                <option value="clothes">Clothes</option>
-                <option value="skincare">Skincare</option>
-                <option value="health">Health</option>
-                <option value="education">Education</option>
-                <option value="electricity_bill">Electricity bill</option>
-                <option value="internet">Internet</option>
-                <option value="rent">Rent</option>
-            </select>
-
-            <button id="apply-filters">Filter</button>
-            <button id="reset-filters">Reset</button>
-
-            <h3>Expense History</h3>
-            <ul id="expense-list"></ul>
-            <div id="expense-list" class="expense-list"></div>
-            <div id="total-expense" class="total-expense"></div>
-        </div>
-    </div>
-</body>
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>
