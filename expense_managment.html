@@ -32,32 +32,48 @@
                     Managment
                 </button>
             </div>
+            <div class="dual-section">
+                <!-- Expenses Section -->
+                <div class="section expenses">
+                    <h2>Expenses</h2>
+                    <!-- <div class="expense-list-section"> -->
+                    <input type="date" id="filter-date" />
 
-            <div class="expense-list-section">
-                <input type="date" id="filter-date" />
+                    <!-- Filtro por categoría -->
+                    <select id="filter-category">
+                        <option value="">Categories</option>
+                        <option value="food">Food</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="outings">Outings</option>
+                        <option value="container_household_items">Household</option>
+                        <option value="clothes">Clothes</option>
+                        <option value="skincare">Skincare</option>
+                        <option value="health">Health</option>
+                        <option value="education">Education</option>
+                        <option value="electricitybill">Electricity bill</option>
+                        <option value="internet">Internet</option>
+                        <option value="rent">Rent</option>
+                    </select>
 
-                <!-- Filtro por categoría -->
-                <select id="filter-category">
-                    <option value="">Categories</option>
-                    <option value="food">Food</option>
-                    <option value="transportation">Transportation</option>
-                    <option value="outings">Outings</option>
-                    <option value="container_household_items">Household</option>
-                    <option value="clothes">Clothes</option>
-                    <option value="skincare">Skincare</option>
-                    <option value="health">Health</option>
-                    <option value="education">Education</option>
-                    <option value="electricitybill">Electricity bill</option>
-                    <option value="internet">Internet</option>
-                    <option value="rent">Rent</option>
-                </select>
+                    <button id="apply-filters">Filter</button>
+                    <button id="reset-filters">Reset</button>
 
-                <button id="apply-filters">Filter</button>
-                <button id="reset-filters">Reset</button>
+                    <h3>Expense History</h3>
+                    <ul id="expense-list"></ul>
+                    <div id="total-expense" class="total-expense"></div>
+                </div>
+                <!-- Incomes Section -->
+                <div class="section incomes">
+                    <h2>Incomes</h2>
+                    <!-- Aquí va el contenido de ingresos, puedes copiar estructura similar a Expenses -->
+                    <input type="text" placeholder="Income Source" />
+                    <input type="number" placeholder="Amount" />
+                    <button>Add Income</button>
 
-                <h3>Expense History</h3>
-                <ul id="expense-list"></ul>
-                <div id="total-expense" class="total-expense"></div>
+                    <h3>Income History</h3>
+                    <ul id="income-list"></ul>
+                    <div id="total-income" class="total-income"></div>
+                </div>
             </div>
             <canvas
                 id="myChart"

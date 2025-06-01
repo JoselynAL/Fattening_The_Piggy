@@ -283,6 +283,40 @@ input[type="number"] {
     justify-content: center;
     align-items: center;
 }
+
+.dual-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #c06faa;
+  margin-bottom: 10px;
+}
+
+.section h3 {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 /* Joss ends */
 
 /* Kaho start */
