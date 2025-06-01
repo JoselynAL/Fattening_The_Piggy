@@ -10,7 +10,7 @@ const priceInput = document.querySelector("input[type='number']");
 const submitBtn = document.querySelector(".submit-btn");
 
 // ================================
-// 2. CATEGORY SECTION
+// 2. CATEGORY SECTION EXPENSE
 // ================================
 const categoryContainers = document.querySelectorAll(".body > div");
 
@@ -256,3 +256,7 @@ function applyFilters() {
         2
     )}</p>`;
 }
+
+// ================================
+// 9. CATEGORY SECTION INCOME
+// ================================
