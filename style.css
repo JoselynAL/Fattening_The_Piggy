@@ -1,256 +1,292 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  max-width: 400px;
-  margin: 0 auto;
-  background: white;
-  padding: 16px;
-  border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
 }
 
 .tab_pink {
-  padding: 12px;
-  border: none;
-  background-color: #f3c7de;
-  font-weight: bold;
-  width: 40%;
+    padding: 12px;
+    border: none;
+    background-color: #f3c7de;
+    font-weight: bold;
+    width: 40%;
 }
 
 .tab_white {
-  background-color: white;
-  border-color: pink;
-  width: 40%;
+    background-color: white;
+    border-color: pink;
+    width: 40%;
 }
 
 .date-row,
 .note-row,
 .amount-row {
-  width: 100%;
-  margin-bottom: 12px;
+    width: 100%;
+    margin-bottom: 12px;
 }
 
 label {
-  display: block;
-  margin-bottom: 4px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+input#expense-date,
+input[type="date"],
+select#filter-category {
+    border: 1px solid pink;
 }
 
 input[type="text"],
 input[type="number"] {
-  width: 95%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+    width: 95%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid pink;
 }
 
 input[type="number"] {
-  width: calc(95% - 12px);
+    width: calc(95% - 12px);
 }
 
 .input-with-symbol {
-  position: relative;
+    position: relative;
 }
 
 .input-with-symbol::before {
-  content: "$";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  color: #555;
-  pointer-events: none;
+    content: "$";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
 }
 
 .input-with-symbol input {
-  padding-left: 20px; /* space for $mark */
-  height: 30px;
-  font-size: 16px;
+    padding-left: 20px; /* space for $mark */
+    height: 30px;
+    font-size: 16px;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.display_left {
+    width: 500px;
+}
+
+.pig_logo {
+    width: 150px;
+    justify-content: center;
+    align-items: center;
 }
 
 .submit-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #c06faa;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-top: 20px;
-  cursor: pointer;
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    background-color: #c06faa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
+/* Desktop */
 @media (min-width: 601px) {
-  .container {
-      max-width: 100%;
-      margin: 0;
-      background: white;
-      padding: 16px;
-      border-radius: 10px;
-  }
+    .container {
+        max-width: 100%;
+        margin: 0;
+        background: white;
+        padding: 55px;
+        border-radius: 10px;
+    }
 
-  .tabs {
-      margin: 0 auto;
-      justify-content: center;
-  }
+    .tabs {
+        margin: 0 auto 16px auto;
+        justify-content: center;
+    }
 
-  .tab_pink,
-  .tab_white {
-      width: 150px;
-  }
+    .tab_pink,
+    .tab_white {
+        width: 150px;
+    }
 
-  .date-row,
-  .note-row,
-  .amount-row {
-      width: 100%;
-      margin-bottom: 12px;
-  }
+    .date-row,
+    .note-row,
+    .amount-row {
+        width: 100%;
+        margin-bottom: 12px;
+    }
 
-  label {
-      display: block;
-      margin-bottom: 4px;
-      font-weight: bold;
-  }
+    label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+    }
 
-  input[type="text"],
-  input[type="number"] {
-      width: 95%;
-      padding: 8px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-  }
+    input[type="text"],
+    input[type="number"] {
+        width: 95%;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid pink;
+    }
 
-  input[type="number"] {
-      width: calc(95% - 12px);
-  }
+    input[type="number"] {
+        width: calc(95% - 12px);
+    }
 
-  .input-with-symbol {
-      position: relative;
-  }
+    .input-with-symbol {
+        position: relative;
+    }
 
-  .input-with-symbol::before {
-      content: "$";
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 16px;
-      color: #555;
-      pointer-events: none;
-  }
+    .input-with-symbol::before {
+        content: "$";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #555;
+        pointer-events: none;
+    }
 
-  .input-with-symbol input {
-      padding-left: 20px; /* space for $mark */
-      height: 30px;
-      font-size: 16px;
-  }
-  .date-row,
-  .note-row,
-  .amount-row {
-      width: 50%;
-      margin-bottom: 12px;
-  }
-  .submit-btn {
-      width: 50%;
-  }
+    .input-with-symbol input {
+        padding-left: 20px; /* space for $mark */
+        height: 30px;
+        font-size: 16px;
+    }
+    .pig_logo {
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+    .date-row,
+    .note-row,
+    .amount-row {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .submit-btn {
+        width: 50%;
+    }
 }
 
 /* Joss starts */
 
-  .header_body {
+.header_body {
     background-color: white;
     color: #f1363f;
     text-align: left;
     padding: 15px 25px;
     margin-top: 10px;
-  }
-  .body {
+}
+.body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0px 10px;
-  }
-  .container_food,
-  .container_household_items,
-  .container_clothes,
-  .container_skincare,
-  .container_outings,
-  .container_health,
-  .container_education,
-  .container_electricity_bill,
-  .container_transportation,
-  .container_internet,
-  .container_rent,
-  .container_edit,
-  .container_salary,
-  .container_extra,
-  .container_bonus,
-  .container_invest {
+}
+
+.category_container {
+    max-width: 750px;
+    margin: auto;
+}
+
+.container_food,
+.container_household_items,
+.container_clothes,
+.container_skincare,
+.container_outings,
+.container_health,
+.container_education,
+.container_electricity_bill,
+.container_transportation,
+.container_internet,
+.container_rent,
+.container_edit,
+.container_salary,
+.container_extra,
+.container_bonus,
+.container_invest {
     width: 70px;
     height: 60px;
     margin: 10px;
     text-align: center;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 5px;
-    
-  }
-  .container_food img,
-  .container_household_items img,
-  .container_clothes img,
-  .container_skincare img,
-  .container_outings img,
-  .container_health img,
-  .container_education img,
-  .container_electricity_bill img,
-  .container_transportation img,
-  .container_internet img,
-  .container_rent img,
-  .container_edit img,
-  .container_salary img,
-  .container_extra img,
-  .container_bonus img,
-  .container_invest img {
+}
+.container_food img,
+.container_household_items img,
+.container_clothes img,
+.container_skincare img,
+.container_outings img,
+.container_health img,
+.container_education img,
+.container_electricity_bill img,
+.container_transportation img,
+.container_internet img,
+.container_rent img,
+.container_edit img,
+.container_salary img,
+.container_extra img,
+.container_bonus img,
+.container_invest img {
     width: 30px;
     height: 30px;
-  }
-  .container_food p,
-  .container_household_items p,
-  .container_clothes p,
-  .container_skincare p,
-  .container_outings p,
-  .container_health p,
-  .container_education p,
-  .container_electricity_bill p,
-  .container_transportation p,
-  .container_internet p,
-  .container_rent p,
-  .container_edit p,
-  .container_salary p,
-  .container_extra p,
-  .container_bonus p,
-  .container_invest p {            
-    font-size: 11px;            
+}
+.container_food p,
+.container_household_items p,
+.container_clothes p,
+.container_skincare p,
+.container_outings p,
+.container_health p,
+.container_education p,
+.container_electricity_bill p,
+.container_transportation p,
+.container_internet p,
+.container_rent p,
+.container_edit p,
+.container_salary p,
+.container_extra p,
+.container_bonus p,
+.container_invest p {
+    font-size: 11px;
     /* font-weight: bolder; */
     color: #9d9b08;
     justify-content: center;
     align-items: center;
-  }
+}
 /* Joss ends */
 
-/* Kaho start */  
-  .submit-btn {
+/* Kaho start */
+.submit-btn {
     width: 100%;
     padding: 12px;
     background-color: #c06faa;
@@ -260,7 +296,7 @@ input[type="number"] {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
-  }
+}
 /*   
   .nav-bar {
     display: flex;
@@ -277,30 +313,28 @@ input[type="number"] {
     color: #333;
   } */
 
-  .selected {
-    border: 2px solid #007BFF;
+.selected {
+    border: 2px solid #007bff;
     background-color: #e6f0ff;
     border-radius: 8px;
 }
 
-  .expense-list-section {
+.expense-list-section {
     margin-top: 20px;
     background-color: #f5f5f5;
     padding: 15px;
     border-radius: 8px;
-  }
-  
-  #expense-list {
+}
+
+#expense-list {
     list-style: none;
     padding: 0;
-  }
-  
-  #expense-list li {
+}
+
+#expense-list li {
     margin-bottom: 10px;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  }
-  
-  
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
