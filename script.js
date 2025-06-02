@@ -51,7 +51,19 @@ if (submitBtn) {
             category: selectedCategory,
         };
 
+        // 予算チェック
+        const totalBudget = parseFloat(localStorage.getItem("totalBudget"));
         const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+        const currentTotal = expenses.reduce((sum, e) => sum + e.price, 0);
+        const newTotal = currentTotal + price;
+
+        if (!isNaN(totalBudget) && newTotal > totalBudget) {
+            alert(
+                `⚠️ Warning: You have exceeded your total budget!\n` +
+                    `Budget: $${totalBudget.toFixed(2)}, ` +
+                    `Total after this expense: $${newTotal.toFixed(2)}`
+            );
+        }
         expenses.push(newExpense);
         localStorage.setItem("expenses", JSON.stringify(expenses));
 
@@ -255,4 +267,22 @@ function applyFilters() {
     totalContainer.innerHTML = `<p><strong>Total Filtrado:</strong> $${total.toFixed(
         2
     )}</p>`;
+}
+
+// ================================
+// 9. SET TOTAL BUDGET
+// ================================
+const setBudgetBtn = document.getElementById("set-total-budget-btn");
+if (setBudgetBtn) {
+    setBudgetBtn.addEventListener("click", () => {
+        const budgetAmount = parseFloat(
+            document.getElementById("total-budget-amount").value
+        );
+        if (isNaN(budgetAmount) || budgetAmount < 0) {
+            alert("Please enter a valid budget amount.");
+            return;
+        }
+        localStorage.setItem("totalBudget", budgetAmount);
+        alert(`Total budget set to $${budgetAmount.toFixed(2)}.`);
+    });
 }
