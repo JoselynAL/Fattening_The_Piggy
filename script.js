@@ -10,7 +10,7 @@ const priceInput = document.querySelector("input[type='number']");
 const submitBtn = document.querySelector(".submit-btn");
 
 // ================================
-// 2. CATEGORY SECTION
+// 2. CATEGORY SECTION EXPENSE
 // ================================
 const categoryContainers = document.querySelectorAll(".body > div");
 
@@ -269,6 +269,8 @@ function applyFilters() {
     )}</p>`;
 }
 
+
+
 // ================================
 // 9. SET TOTAL BUDGET
 // ================================
@@ -286,3 +288,4 @@ if (setBudgetBtn) {
         alert(`Total budget set to $${budgetAmount.toFixed(2)}.`);
     });
 }
+
