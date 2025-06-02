@@ -12,8 +12,8 @@
             <div class="tabs">
                 <button
                     class="tab_white"
-                    onclick="location.href='income.html'"
-                    href="expense.html"
+                    onclick="location.href='index.html'"
+                    href="index.html"
                 >
                     Expense
                 </button>
@@ -32,11 +32,20 @@
                     Managment
                 </button>
             </div>
+
                 <!-- Expenses Section -->
                 <div class="section expenses">
                     <h2>Expenses</h2>
                     <!-- <div class="expense-list-section"> -->
                     <input type="date" id="filter-date" />
+
+            <div id="budget-settings">
+                <h3>Set Total Budget</h3>
+                <label>Total Budget ($):</label>
+                <input type="number" id="total-budget-amount" min="0" />
+                <button id="set-total-budget-btn">Set Budget</button>
+            </div>
+
 
                     <!-- Filtro por categoría -->
                     <select id="filter-category">
