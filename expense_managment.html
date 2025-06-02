@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Income & Expense Tracker</title>
         <link rel="stylesheet" href="style.css" />
     </head>
 
@@ -27,7 +27,7 @@
                 <button
                     class="tab_pink"
                     onclick="location.href='expense_managment.html'"
-                    href="expense_managment.html"
+
                 >
                     Managment
                 </button>
@@ -66,9 +66,9 @@
                 <div class="section incomes">
                     <h2>Incomes</h2>
                     <!-- Aquí va el contenido de ingresos, puedes copiar estructura similar a Expenses -->
-                    <input type="text" placeholder="Income Source" />
-                    <input type="number" placeholder="Amount" />
-                    <button>Add Income</button>
+                    <input type="text" id="income-source" placeholder="Income Source" />
+                    <input type="number" id="income-amount" placeholder="Amount" />
+                    <button id="add-income-btn">Add Income</button>
 
                     <h3>Income History</h3>
                     <ul id="income-list"></ul>
@@ -80,8 +80,9 @@
                 style="width: 100%; max-width: 400px; margin: auto"
             ></canvas>
         </div>
-    </body>
+    
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.3/plotly.min.js"></script>
+</body>
 </html>
